@@ -11,9 +11,13 @@
       <div v-if="this.description !== `` " class="preview-description">{{this.description}}</div>
       <div v-else class="preview-description">Long Name Description</div>
       <div class="preview-price-div">
-        <div class="preview-price">Price</div>
+        <div
+          v-if="this.netprice !== `` "
+          class="preview-price"
+        >{{this.netprice}} {{this.selected}} hour</div>
+        <div v-else class="preview-price">Price</div>
         <div class="preview-total-price">
-          <div class="preview-price-net">Net Price</div>
+          <div class="preview-price-gross">{{this.grossPay(this.netprice)}} {{this.selected}}</div>
           <div class="preview-price-gross">Gross Price</div>
         </div>
       </div>
@@ -22,7 +26,12 @@
 </template>
 <script>
 export default {
-  props: ["name", "description", "imageurl", "netprice", "selected"]
+  props: ["name", "description", "imageurl", "netprice", "selected"],
+  methods: {
+    grossPay(netpricehour) {
+      return (40 * netpricehour * 1.5).toFixed(2);
+    }
+  }
 };
 </script>
 <style>
