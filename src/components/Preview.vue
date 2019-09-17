@@ -2,9 +2,11 @@
   <div class="preview">
     <div class="name">Reusable Preview</div>
     <div class="preview-div">
-      <div class="preview-name">Name</div>
+      <div v-if="this.name !== `` " class="preview-name">{{this.name}}</div>
+      <div v-else class="preview-name">Name</div>
       <div class="preview-image">Image</div>
-      <div class="preview-description">Long Name Description</div>
+      <div v-if="this.description !== `` " class="preview-description">{{this.description}}</div>
+      <div v-else class="preview-description">Long Name Description</div>
       <div class="preview-price-div">
         <div class="preview-price">Price</div>
         <div class="preview-total-price">

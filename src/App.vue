@@ -5,9 +5,15 @@
         <div class="name">Builder</div>
         <form class="form-builder">
           <label class="label-name">Name</label>
-          <input class="input-name" v-model="name" type="text" placeholder="Name" />
+          <input class="input-name" v-model="name" type="text" placeholder="Name" maxlength="15" />
           <label class="label-name">Description</label>
-          <input class="input-name" v-model="description" type="text" placeholder="Description" />
+          <input
+            class="input-name"
+            v-model="description"
+            type="text"
+            placeholder="Description"
+            maxlength="25"
+          />
           <label class="label-name">Image Url</label>
           <input class="input-name" v-model="imageurl" type="text" placeholder="Image Url" />
           <label class="label-name">Price Calculator</label>
