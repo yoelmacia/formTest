@@ -16,7 +16,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: ["name", "description", "imageurl", "netprice", "selected"]
+};
 </script>
 <style>
 .preview {

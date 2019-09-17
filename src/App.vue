@@ -20,7 +20,13 @@
           </select>
         </form>
       </div>
-      <Preview></Preview>
+      <Preview
+        :name="this.name"
+        :description="this.description"
+        :imageurl="this.imageurl"
+        :netprice="this.netprice"
+        :selected="this.selected"
+      ></Preview>
     </div>
   </div>
 </template>
