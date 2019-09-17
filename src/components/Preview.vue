@@ -4,7 +4,10 @@
     <div class="preview-div">
       <div v-if="this.name !== `` " class="preview-name">{{this.name}}</div>
       <div v-else class="preview-name">Name</div>
-      <div class="preview-image">Image</div>
+      <div v-if="this.imageurl !== `` " class="preview-image-2">
+        <img :src="this.imageurl" class="image" />
+      </div>
+      <div v-else class="preview-image">Image</div>
       <div v-if="this.description !== `` " class="preview-description">{{this.description}}</div>
       <div v-else class="preview-description">Long Name Description</div>
       <div class="preview-price-div">
@@ -33,7 +36,6 @@ export default {
   text-align: center;
   margin: 0 auto;
   margin-top: 30px;
-  background-color: #8ebf42;
   width: 210px;
   height: 250px;
   border: 1px solid black;
@@ -76,5 +78,15 @@ export default {
   width: 104px;
   float: right;
   line-height: 35px;
+}
+.image {
+  width: 208px;
+  height: 81px;
+  border-bottom: 1px solid black;
+}
+.preview-image-2 {
+  height: 81px;
+  line-height: 30px;
+  object-fit: cover;
 }
 </style>
