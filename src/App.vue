@@ -20,29 +20,18 @@
           </select>
         </form>
       </div>
-      <div class="preview">
-        <div class="name">Reusable Preview</div>
-        <div class="preview-div">
-          <div class="preview-name">Name</div>
-          <div class="preview-image">Image</div>
-          <div class="preview-description">Long Name Description</div>
-          <div class="preview-price-div">
-            <div class="preview-price">Price</div>
-            <div class="preview-total-price">
-              <div class="preview-price-net">Net Price</div>
-              <div class="preview-price-gross">Gross Price</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Preview></Preview>
     </div>
   </div>
 </template>
 
 <script>
+import Preview from "./components/Preview";
 export default {
   name: "app",
-  components: {},
+  components: {
+    Preview
+  },
   data() {
     return {
       name: "",
@@ -59,12 +48,6 @@ export default {
 .builder {
   display: inline-block;
   background-color: rgb(245, 245, 245);
-  width: 300px;
-  height: 400px;
-}
-.preview {
-  display: inline-block;
-  background-color: rgb(216, 216, 216);
   width: 300px;
   height: 400px;
 }
@@ -93,53 +76,5 @@ export default {
 .input-name {
   margin-left: 22px;
   width: 200px;
-}
-.preview-div {
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 30px;
-  background-color: #8ebf42;
-  width: 210px;
-  height: 250px;
-  border: 1px solid black;
-}
-.preview-name,
-.preview-div,
-.preview-image,
-.preview-description {
-  border-bottom: 1px solid black;
-}
-.preview-image,
-.preview-description {
-  height: 30px;
-  line-height: 30px;
-  padding: 25px;
-}
-.preview-image,
-.preview-name {
-  background-color: rgb(216, 216, 216);
-}
-.preview-description,
-.preview-price-div {
-  background-color: rgb(130, 130, 130);
-  color: rgb(192, 192, 192);
-}
-.preview-price-div {
-  width: 210px;
-  height: 69px;
-}
-.preview-price {
-  height: 69px;
-  width: 105px;
-  border-right: 1px solid black;
-  line-height: 69px;
-  float: left;
-  background-color: rgb(147, 147, 147);
-}
-.preview-total-price {
-  height: 69px;
-  width: 104px;
-  float: right;
-  line-height: 35px;
 }
 </style>
